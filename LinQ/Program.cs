@@ -12,11 +12,12 @@ namespace LinQ
         {
             List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie" };
 
-            // Get name which contains substring of "ran"
-            var result = names.Where(x => x.Contains("ran"));
+            // reverse the list of names
+            //names.Reverse();
 
+            IEnumerable<string> result = names.AsEnumerable().Reverse();
 
-            //
+            // printing
             foreach(var name in result)
             {
                 Console.WriteLine(name);
