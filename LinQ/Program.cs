@@ -10,16 +10,32 @@ namespace LinQ
     {
         static void Main(string[] args)
         {
-            List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie" };
-
-            // Get name which contains substring of "ran"
-            var result = names.Where(x => x.Contains("ran"));
-
 
             //
-            foreach(var name in result)
+            var empList = Employes.GetStudents();
+            var deptList = Department.GetDepartments();
+
+            //
+            Department findDeptId;
+            
+            try
             {
-                Console.WriteLine(name);
+                //
+                Console.WriteLine("Enter department name");
+                var deptName = Console.ReadLine();
+
+                findDeptId = deptList.Where(d => d.Name.Contains(deptName)).ToList().Single();
+                var result = empList.Where(x => x.DeptId == findDeptId.Id);
+
+                foreach (var a in result)
+                {
+                    //Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {deptList.Where(n => n.Id == a.DeptId).ToList().ElementAt(0).Name}");
+                    Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {deptName}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
             }
 
             Console.ReadLine();
