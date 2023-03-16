@@ -1,0 +1,7 @@
+C:\Users\Weybee-N1\Desktop\.NET\NET-Linq\LinQ\bin\Debug\LinQ.exe.config
+C:\Users\Weybee-N1\Desktop\.NET\NET-Linq\LinQ\bin\Debug\LinQ.exe
+C:\Users\Weybee-N1\Desktop\.NET\NET-Linq\LinQ\bin\Debug\LinQ.pdb
+C:\Users\Weybee-N1\Desktop\.NET\NET-Linq\LinQ\obj\Debug\LinQ.csproj.AssemblyReference.cache
+C:\Users\Weybee-N1\Desktop\.NET\NET-Linq\LinQ\obj\Debug\LinQ.csproj.CoreCompileInputs.cache
+C:\Users\Weybee-N1\Desktop\.NET\NET-Linq\LinQ\obj\Debug\LinQ.exe
+C:\Users\Weybee-N1\Desktop\.NET\NET-Linq\LinQ\obj\Debug\LinQ.pdb

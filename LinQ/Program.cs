@@ -10,6 +10,19 @@ namespace LinQ
     {
         static void Main(string[] args)
         {
+            // Get Emloyees
+            var listOfEmps = Employes.GetStudents();
+
+            // Emps whose salary is between 600 - 8000
+            var result = listOfEmps.Where(emp => emp.Salary >= 6000 && emp.Salary <= 8000);
+
+            //
+            foreach(var em in result)
+            {
+                Console.WriteLine($"ID : {em.Id}  Name : {em.Name}  Salary : {em.Salary}");
+            }
+
+            Console.ReadLine();
         }
     }
 }
