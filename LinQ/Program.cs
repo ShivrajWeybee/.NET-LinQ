@@ -10,16 +10,16 @@ namespace LinQ
     {
         static void Main(string[] args)
         {
-            // Get Emloyees
-            var listOfEmps = Employes.GetStudents();
+            List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie" };
 
-            // Emps whose salary is between 600 - 8000
-            var result = listOfEmps.Where(emp => emp.Salary >= 6000 && emp.Salary <= 8000);
+            // Get name which contains substring of "ran"
+            var result = names.Where(x => x.Contains("ran"));
+
 
             //
-            foreach(var em in result)
+            foreach(var name in result)
             {
-                Console.WriteLine($"ID : {em.Id}  Name : {em.Name}  Salary : {em.Salary}");
+                Console.WriteLine(name);
             }
 
             Console.ReadLine();
