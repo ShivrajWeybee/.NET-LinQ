@@ -13,7 +13,8 @@ namespace LinQ
             List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie" };
 
             // Get name which contains substring of "ran"
-            var result = names.Where(x => x.Contains("ran"));
+            string searchString = "ran";
+            var result = names.Where(x => x.ToLower().Contains(searchString));
 
 
             //
