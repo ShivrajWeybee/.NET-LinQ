@@ -31,11 +31,23 @@ namespace LinQ
                 var deptName = Console.ReadLine();
 
                 findDeptId = deptList.Where(d => d.Name == deptName).First();
-                var result = empList.Where(x => x.DeptId == findDeptId.Id);
+                //var result = empList.Where(x => x.DeptId == findDeptId.Id);
 
-                foreach (var a in result)
+                var resultQS = from emp in empList
+                               join dept in deptList
+                               on emp.DeptId equals dept.Id
+                               where emp.DeptId == findDeptId.Id
+                               select new
+                               {
+                                   Id = emp.Id,
+                                   Name = emp.Name,
+                                   Salary = emp.Salary,
+                                   DeptName = dept.Name
+                               };
+
+                foreach (var a in resultQS)
                 {
-                    Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {findDeptId.Name}");
+                    Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {a.DeptName}");
                     //Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {deptName}");
                 }
             }
@@ -47,14 +59,6 @@ namespace LinQ
 
             // ----------------------------------------------------------------------------------------------------------
 
-
-            //var resultQS = from emp in empList
-            //               join dept in deptList
-            //               on emp.DeptId equals 
-            //               select new
-            //               {
-
-            //               };
 
 
             Console.ReadLine();
