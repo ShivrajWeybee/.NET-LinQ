@@ -12,8 +12,8 @@ namespace LinQ
         {
             List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie", "Mark", "Rancho", "Darsahn" };
 
-            // get first 3 element from list
-            var result = names.Take(3);
+            // get element from 5th index to next 5 element in list
+            var result = names.Skip(4).Take(5);
 
             //
             foreach(var a in result)
