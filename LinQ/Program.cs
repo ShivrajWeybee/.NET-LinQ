@@ -10,11 +10,10 @@ namespace LinQ
     {
         static void Main(string[] args)
         {
-            List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie" };
+            List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie", "Mark", "Rancho", "Darsahn" };
 
-            // Get name which contains substring of "ran"
-            var result = names.Where(x => x.Contains("ran"));
-
+            // List without duplicates
+            var result = names.Distinct();
 
             //
             foreach(var name in result)
