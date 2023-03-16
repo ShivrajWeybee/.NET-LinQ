@@ -19,6 +19,14 @@ namespace LinQ
 
             try
             {
+                //var deptName = Console.ReadLine();
+                //do
+                //{                 
+                //    Console.WriteLine("Enter department name");
+                //    deptName = Console.ReadLine();
+                //}
+                //while (deptList.Select(x => x.Name).ToList().Contains(deptName)) ;
+
                 Console.WriteLine("Enter department name");
                 var deptName = Console.ReadLine();
 
