@@ -12,13 +12,13 @@ namespace LinQ
         {
             List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie", "Mark", "Rancho", "Darsahn" };
 
-            // List without duplicates
-            var result = names.Distinct();
+            // get first 3 element from list
+            var result = names.Take(3);
 
             //
-            foreach(var name in result)
+            foreach(var a in result)
             {
-                Console.WriteLine(name);
+                Console.WriteLine(a);
             }
 
             Console.ReadLine();
