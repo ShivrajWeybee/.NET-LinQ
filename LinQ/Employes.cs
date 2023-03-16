@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LinQ
 {
-    class Employes : IEnumerable
+    class Employes
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -28,11 +28,6 @@ namespace LinQ
                 new Employes { Id = 1009, Name = "Celina", Salary = 35000 },
                 new Employes { Id = 1010, Name = "Sambit", Salary = 8000 }
             };
-        }
-
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
         }
     }
 }
