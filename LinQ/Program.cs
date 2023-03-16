@@ -10,16 +10,11 @@ namespace LinQ
     {
         static void Main(string[] args)
         {
-            List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie", "Mark", "Rancho", "Darsahn" };
+            List<string> names1 = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie", "Mark", "Rancho", "Darsahn" };
+            List<string> names2 = new List<string> { "Smith", "Marcus", "David", "Nathon" };
 
             // get element from 5th index to next 5 element in list
-            var result = names.Skip(4).Take(5);
 
-            //
-            foreach(var a in result)
-            {
-                Console.WriteLine(a);
-            }
 
             Console.ReadLine();
         }
