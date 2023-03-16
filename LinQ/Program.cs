@@ -10,13 +10,19 @@ namespace LinQ
     {
         static void Main(string[] args)
         {
-            List<string> names = new List<string> { "Mark", "Dustiban", "Rancho", "Haranika", "Darsahn", "Brandan", "Brandie", "Mark", "Rancho", "Darsahn" };
+            List<string> names = new List<string> { "Om", "Mark", "Dustiban", "Rancho", "Haranika", "Mes", "Darsahn", "Brandan", "Brandie", "Tony", "A", "Rancho", "Darsahn" };
 
-            // List without duplicates
-            var result = names.Distinct();
+            // name whose length is 4 or 4 +
+            var result = names.Where(n => n.Length >= 4);
+            foreach (var name in result)
+            {
+                Console.WriteLine(name);
+            }
+            Console.WriteLine();
 
-            //
-            foreach(var name in result)
+            //name whose length is 4 or 4 
+            var result2 = names.Where(n => n.Length == 4);
+            foreach (var name in result2)
             {
                 Console.WriteLine(name);
             }
