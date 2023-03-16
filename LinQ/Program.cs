@@ -10,16 +10,21 @@ namespace LinQ
     {
         static void Main(string[] args)
         {
-            // Get Emloyees
-            var listOfEmps = Employes.GetStudents();
-
-            // Emps whose salary is between 600 - 8000
-            var result = listOfEmps.Where(emp => emp.Salary >= 6000 && emp.Salary <= 8000);
-
-            //
-            foreach(var em in result)
+            string[] files =
             {
-                Console.WriteLine($"ID : {em.Id}  Name : {em.Name}  Salary : {em.Salary}");
+                "file1.txt",
+                "file2.pdf",
+                "file3.xml",
+                "file4.txt",
+                "file5.pdf"
+            };
+
+            var result = files.Where(x => x.Contains(".txt"));
+
+            Console.WriteLine($"Total - {result.Count()}");
+            foreach (var a in result)
+            {
+                Console.WriteLine(a);
             }
 
             Console.ReadLine();
