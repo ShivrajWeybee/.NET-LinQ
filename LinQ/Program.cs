@@ -30,12 +30,12 @@ namespace LinQ
                 Console.WriteLine("Enter department name");
                 var deptName = Console.ReadLine();
 
-                findDeptId = deptList.Where(d => d.Name.Contains(deptName)).ToList().Single();
+                findDeptId = deptList.Where(d => d.Name == deptName).First();
                 var result = empList.Where(x => x.DeptId == findDeptId.Id);
 
                 foreach (var a in result)
                 {
-                    Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {deptList.Where(n => n.Id == a.DeptId).ToList().ElementAt(0).Name}");
+                    Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {findDeptId.Name}");
                     //Console.WriteLine($"Id : {a.Id}  Name : {a.Name}  Salary : {a.Salary}  DeptName : {deptName}");
                 }
             }
